@@ -29,4 +29,14 @@ storiesOf('Button', module)
     <Button onPress={action('clicked-text')} inverted>
       Save
     </Button>
+  ))
+  .add('Botão disabled', () => (
+    <Button onPress={action('clicked-text')} disabled>
+      Save
+    </Button>
+  ))
+  .add('Botão invertido disabled', () => (
+    <Button onPress={action('clicked-text')} disabled inverted>
+      Save
+    </Button>
   ));
