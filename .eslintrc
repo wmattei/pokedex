@@ -1,0 +1,82 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "prettier", "import"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "prettier",
+    "prettier/@typescript-eslint",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module"
+  },
+  "env": {
+    "es6": true,
+    "browser": true,
+    "jest": true,
+    "node": true
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "import/resolver": {
+      "typescript": {
+        "alwaysTryTypes": true
+      },
+      "alias": {
+        "map": [
+          ["~", "./"],
+          ["Client", "./src/client"],
+          ["Server", "./src/server"],
+          ["Shared", "./src/shared"],
+          ["Components", "./src/client/components"],
+          ["Theme", "./src/client/components/theme"],
+          ["Atoms", "./src/client/components/atoms"],
+          ["Icons", "./src/client/components/atoms/Icons"],
+          ["Molecules", "./src/client/components/molecules"],
+          ["Organisms", "./src/client/components/organisms"],
+          ["Pages", "./src/client/pages"],
+          ["Templates", "./src/client/templates"],
+          ["Types", "./src/client/components/types"],
+          ["Models", "./src/server/models"],
+          ["Context", "./src/client/context"],
+          ["Services", "./src/server/services"]
+        ],
+        "extensions": [".js", ".ts", ".tsx"]
+      }
+    }
+  },
+  "rules": {
+    // "max-lines": ["warn", 250],
+    // "max-lines-per-function": ["warn", 75],
+    // "complexity": ["warn", 5],
+    // "max-params": ["warn", 4],
+    "react/prop-types": 0,
+    "prettier/prettier": ["error", { "singleQuote": true }],
+    "prefer-destructuring": ["error", { "object": true, "array": false }],
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          ["parent", "sibling", "index"]
+        ],
+        "newlines-between": "never"
+      }
+    ]
+  }
+}
