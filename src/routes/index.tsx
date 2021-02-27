@@ -6,14 +6,27 @@ import Login from '../components/screens/Login';
 import PokemonList from '../components/screens/PokemonList';
 
 const Stack = createStackNavigator();
+const AuthStack = createStackNavigator();
+
+const StackScreens = () => (
+  <Stack.Navigator>
+    <Stack.Screen name={APP_SCREENS.POKEMON.LIST} component={PokemonList} />
+  </Stack.Navigator>
+);
+
+const AuthScreens = () => (
+  <AuthStack.Navigator>
+    <AuthStack.Screen name={APP_SCREENS.AUTH.LOGIN} component={Login} />
+  </AuthStack.Navigator>
+);
 
 export default function Routes() {
+  const [isLoggedIn] = React.useState(false);
+
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name={APP_SCREENS.AUTH.LOGIN} component={Login} />
-        <Stack.Screen name={APP_SCREENS.POKEMON.LIST} component={PokemonList} />
-      </Stack.Navigator>
+      {isLoggedIn && <StackScreens />}
+      {!isLoggedIn && <AuthScreens />}
     </NavigationContainer>
   );
 }

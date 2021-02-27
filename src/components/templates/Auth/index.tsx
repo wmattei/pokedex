@@ -10,7 +10,6 @@ type Props = {
 
 export default function Auth({ children }: Props) {
   return (
-    // <SafeAreaView style={{ height: '100%' }}>
     <ScrollView style={{ height: '100%', backgroundColor: '#F5FCFF' }}>
       <View style={style.main}>
         <Image
@@ -20,6 +19,5 @@ export default function Auth({ children }: Props) {
         {children}
       </View>
     </ScrollView>
-    // </SafeAreaView>
   );
 }

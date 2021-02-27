@@ -19,8 +19,6 @@ type Props = {
   placeholder?: string;
   disabled?: boolean;
   error?: string;
-  suffix?: React.ReactNode;
-  prefix?: React.ReactNode;
   value?: string;
   type?: FieldType;
 };
@@ -44,10 +42,8 @@ const getTextContentType = (type?: FieldType) => {
 export default function TextField({
   mode,
   disabled,
-  prefix,
   label,
   onChangeText,
-  suffix,
   placeholder,
   error,
   value,
@@ -66,10 +62,8 @@ export default function TextField({
         mode={mode}
         disabled={disabled}
         error={!!error}
-        left={prefix}
         label={label}
         onChangeText={onChangeText}
-        right={suffix}
         placeholder={placeholder}
       />
       <Text style={style.main}>{error}</Text>

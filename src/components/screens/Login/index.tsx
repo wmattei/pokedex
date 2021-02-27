@@ -1,4 +1,4 @@
-import { NavigationProp, useNavigation } from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
 import * as React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { useTheme } from 'react-native-paper';
@@ -42,7 +42,13 @@ export default function Login() {
 
   return (
     <Auth>
-      <View style={StyleSheet.compose(fullWidth.main, style(theme).container)}>
+      <View
+        style={StyleSheet.compose(
+          fullWidth.main,
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          style(theme).container as any
+        )}
+      >
         <Text style={style(theme).welcome}>Bem-vindo</Text>
         <TextField
           onChangeText={(text) =>
