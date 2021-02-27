@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { StyleSheet, Text } from 'react-native';
 import { TextInput as PaperTextInput } from 'react-native-paper';
-import { TextInputProps } from 'react-native-paper/lib/typescript/components/TextInput/TextInput';
 import { KeyboardTypes, TextContentType } from '../../../types';
 
 const style = StyleSheet.create({
@@ -54,6 +53,7 @@ export default function TextField({
   return (
     <>
       <PaperTextInput
+        autoCapitalize="none"
         secureTextEntry={type === 'password'}
         autoCompleteType={type}
         keyboardType={keyboardType as KeyboardTypes}

@@ -43,3 +43,8 @@ export type TextContentType =
   | 'password'
   | 'newPassword'
   | 'oneTimeCode';
+
+export type ContextAction<T> = {
+  type: string;
+  payload?: T;
+};

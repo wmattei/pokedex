@@ -4,6 +4,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { APP_SCREENS } from './app-screens';
 import Login from '../components/screens/Login';
 import PokemonList from '../components/screens/PokemonList';
+import { useAuth } from '../store/auth/useAuth';
 
 const Stack = createStackNavigator();
 const AuthStack = createStackNavigator();
@@ -21,7 +22,7 @@ const AuthScreens = () => (
 );
 
 export default function Routes() {
-  const [isLoggedIn] = React.useState(false);
+  const isLoggedIn = !!useAuth().state.user;
 
   return (
     <NavigationContainer>

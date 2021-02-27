@@ -1,14 +1,16 @@
-import { useNavigation } from '@react-navigation/native';
 import * as React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { useTheme } from 'react-native-paper';
 import { AuthApi } from '../../../api/auth.index';
-import { APP_SCREENS } from '../../../routes/app-screens';
+import { AuthActions } from '../../../store/auth/AuthContext';
+import { useAuth } from '../../../store/auth/useAuth';
 import { fullWidth } from '../../../theme/utils';
+import { ContextAction } from '../../../types';
+import { IUser } from '../../../types/user';
 import Button from '../../atoms/Button';
 import TextField from '../../atoms/TextField';
 import Auth from '../../templates/Auth';
-import { Action, ACTIONS, LoginState, reducer } from './reducer';
+import { ACTIONS, LoginState, reducer } from './reducer';
 import style from './style';
 
 const initialState: LoginState = {
@@ -20,20 +22,18 @@ const initialState: LoginState = {
 
 export default function Login() {
   const theme = useTheme();
-  const navigation = useNavigation();
-
-  const [state, dispatch] = React.useReducer<React.Reducer<LoginState, Action>>(
-    reducer,
-    initialState
-  );
+  const { dispatch: authDispatch } = useAuth();
+  const [state, dispatch] = React.useReducer<
+    React.Reducer<LoginState, ContextAction<string>>
+  >(reducer, initialState);
 
   const login = () => {
     if (!state.email || !state.password || state.loading) return;
     dispatch({ type: ACTIONS.SUBMIT });
     AuthApi.login(state.email, state.password)
-      .then(() => {
+      .then((result: { token: string; user: IUser }) => {
         dispatch({ type: ACTIONS.SUBMIT_SUCCESS });
-        navigation.navigate(APP_SCREENS.POKEMON.LIST);
+        authDispatch({ type: AuthActions.SET_USER, payload: result.user });
       })
       .catch((err) => {
         dispatch({ type: ACTIONS.SUBMIT_FAIL, payload: err });

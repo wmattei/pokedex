@@ -1,3 +1,5 @@
+import { ContextAction } from '../../../types';
+
 export const ACTIONS = {
   EMAIL_CHANGED: 'EMAIL_CHANGED',
   PASSWORD_CHANGED: 'PASSWORD_CHANGED',
@@ -13,12 +15,10 @@ export type LoginState = {
   error?: string;
 };
 
-export type Action = {
-  type: string;
-  payload?: string;
-};
-
-export const reducer: React.Reducer<LoginState, Action> = (state, action) => {
+export const reducer: React.Reducer<LoginState, ContextAction<string>> = (
+  state,
+  action
+) => {
   switch (action.type) {
     case ACTIONS.EMAIL_CHANGED:
       return { ...state, email: action.payload };
