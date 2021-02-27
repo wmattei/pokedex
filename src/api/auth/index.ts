@@ -1,4 +1,4 @@
-import { IUser } from '../types/user';
+import { IUser } from '../../types/user';
 
 export class AuthApi {
   static login(

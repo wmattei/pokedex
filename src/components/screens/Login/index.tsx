@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { useTheme } from 'react-native-paper';
-import { AuthApi } from '../../../api/auth.index';
+import { AuthApi } from '../../../api/auth/index';
 import { AuthActions } from '../../../store/auth/AuthContext';
 import { useAuth } from '../../../store/auth/useAuth';
 import { fullWidth } from '../../../theme/utils';
