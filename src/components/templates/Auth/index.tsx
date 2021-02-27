@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Image, View } from 'react-native';
-import { ScrollView } from 'react-native-gesture-handler';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import style from './style';
 
 type Props = {
@@ -9,7 +9,9 @@ type Props = {
 
 export default function Auth({ children }: Props) {
   return (
-    <ScrollView style={{ height: '100%', backgroundColor: '#F5FCFF' }}>
+    <KeyboardAwareScrollView
+      style={{ height: '100%', backgroundColor: '#F5FCFF' }}
+    >
       <View style={style.main}>
         <Image
           source={{ uri: 'https://img.icons8.com/clouds/452/pokemon-go.png' }}
@@ -17,6 +19,6 @@ export default function Auth({ children }: Props) {
         />
         {children}
       </View>
-    </ScrollView>
+    </KeyboardAwareScrollView>
   );
 }
