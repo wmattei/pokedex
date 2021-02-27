@@ -21,7 +21,7 @@ module.exports = {
     'react/jsx-filename-extension': [
       'warn',
       {
-        extensions: ['.jsx', '.js'],
+        extensions: ['.jsx', '.js', '.tsx'],
       },
     ],
     'import/prefer-default-export': 'off',
@@ -33,5 +33,13 @@ module.exports = {
     'no-console': 'off',
     'space-before-function-paren': 'off',
     'func-names': 'off',
+    'import/no-extraneous-dependencies': [
+      'error',
+      {
+        devDependencies: true,
+        optionalDependencies: false,
+        peerDependencies: false,
+      },
+    ],
   },
 };
