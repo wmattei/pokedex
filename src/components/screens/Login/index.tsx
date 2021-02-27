@@ -76,8 +76,7 @@ export default function Login() {
         <Text style={style(theme).error}>{state.error}</Text>
         <Text style={style(theme).caption}>
           Essa aplicação foi desenvolvida para o processo seletivo da empresa
-          Totvs, e não tem nenhum fim comercial, nem deve ser publicada em lojas
-          de aplicativos.
+          Totvs, e não tem nenhum fim comercial.
         </Text>
       </View>
     </Auth>

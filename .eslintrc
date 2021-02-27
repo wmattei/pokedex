@@ -58,10 +58,10 @@
     }
   },
   "rules": {
-    // "max-lines": ["warn", 250],
-    // "max-lines-per-function": ["warn", 75],
-    // "complexity": ["warn", 5],
-    // "max-params": ["warn", 4],
+    "max-lines": ["warn", 250],
+    "max-lines-per-function": ["warn", 75],
+    "max-params": ["warn", 4],
+    "react/display-name": "off",
     "react/prop-types": 0,
     "prettier/prettier": ["error", { "singleQuote": true }],
     "prefer-destructuring": ["error", { "object": true, "array": false }],
