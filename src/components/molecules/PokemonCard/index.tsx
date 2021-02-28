@@ -6,7 +6,7 @@ import style from './style';
 const POKEMON_IMG_URI = 'https://pokeres.bastionbot.org/images/pokemon/';
 
 type Props = {
-  pokemon: IPokemon;
+  pokemon: Partial<IPokemon>;
 };
 export default function PokemonCard({ pokemon }: Props) {
   return (

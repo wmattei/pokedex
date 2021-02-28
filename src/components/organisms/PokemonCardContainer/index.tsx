@@ -1,29 +1,35 @@
 import * as React from 'react';
-import { Dimensions, View } from 'react-native';
+import { View } from 'react-native';
 import { FlatList } from 'react-native-gesture-handler';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { ActivityIndicator } from 'react-native-paper';
 import { IPokemon } from '../../../types/pokemon';
 import PokemonCard from '../../molecules/PokemonCard';
 import style from './style';
 
 type Props = {
   pokemons: Array<IPokemon>;
+  isLoading?: boolean;
+  onEndReached?: (info: { distanceFromEnd: number }) => void;
 };
 
-export default function PokemonList({ pokemons }: Props) {
-  const isPortrait = () => {
-    const dim = Dimensions.get('screen');
-    return dim.height >= dim.width;
-  };
-
+export default function PokemonList({
+  pokemons,
+  onEndReached,
+  isLoading = false,
+}: Props) {
   return (
-    <SafeAreaView>
+    <View>
       <FlatList
+        onEndReached={onEndReached}
+        removeClippedSubviews
         style={style.container}
-        key={isPortrait() ? 'v' : 'h'}
         data={pokemons}
-        numColumns={+(Dimensions.get('window').width / 230).toFixed()}
-        keyExtractor={(item) => item.id.toString()}
+        numColumns={2}
+        onEndReachedThreshold={0.2}
+        keyExtractor={(item) => `pokemon-${item.name}`}
+        ListFooterComponent={() => {
+          return isLoading ? <ActivityIndicator /> : <></>;
+        }}
         renderItem={(pokemon) => (
           <View style={style.item}>
             <PokemonCard
@@ -33,6 +39,6 @@ export default function PokemonList({ pokemons }: Props) {
           </View>
         )}
       />
-    </SafeAreaView>
+    </View>
   );
 }
