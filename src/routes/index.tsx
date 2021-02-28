@@ -5,6 +5,7 @@ import { IconButton } from 'react-native-paper';
 import { APP_SCREENS } from './app-screens';
 import Login from '../components/screens/Login';
 import PokemonList from '../components/screens/PokemonList';
+import PokemonDetails from '../components/screens/PokemonDetails';
 import { useAuth } from '../store/auth/useAuth';
 import { AuthActions } from '../store/auth/AuthContext';
 
@@ -26,6 +27,10 @@ const StackScreens = () => {
         options={{
           headerRight: () => <IconButton icon="logout" onPress={logout} />,
         }}
+      />
+      <Stack.Screen
+        name={APP_SCREENS.POKEMON.DETAIL}
+        component={PokemonDetails}
       />
     </Stack.Navigator>
   );

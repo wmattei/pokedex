@@ -1,7 +1,9 @@
+import { useNavigation } from '@react-navigation/native';
 import * as React from 'react';
 import { View } from 'react-native';
 import { FlatList } from 'react-native-gesture-handler';
 import { ActivityIndicator } from 'react-native-paper';
+import { APP_SCREENS } from '../../../routes/app-screens';
 import { IPokemon } from '../../../types/pokemon';
 import PokemonCard from '../../molecules/PokemonCard';
 import style from './style';
@@ -17,6 +19,8 @@ export default function PokemonList({
   onEndReached,
   isLoading = false,
 }: Props) {
+  const { navigate } = useNavigation();
+
   return (
     <View>
       <FlatList
@@ -32,6 +36,11 @@ export default function PokemonList({
         renderItem={(pokemon) => (
           <View style={style.item}>
             <PokemonCard
+              onPress={() =>
+                navigate(APP_SCREENS.POKEMON.DETAIL, {
+                  pokemonId: pokemon.item.id,
+                })
+              }
               key={`pokemon-${pokemon.item.id}`}
               pokemon={pokemon.item}
             />

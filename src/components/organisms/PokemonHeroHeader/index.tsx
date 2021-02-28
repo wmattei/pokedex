@@ -1,10 +1,9 @@
 import * as React from 'react';
-import { Image, View } from 'react-native';
+import { View } from 'react-native';
+import { Image } from 'react-native-expo-image-cache';
 import { useTheme } from 'react-native-paper';
-import { useCachedImage } from '../../../utils/file/fileHooks';
+import { POKEMON_IMG_PLACEHOLDER } from '../../../constants';
 import style from './style';
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const placeholder = require('../../../../assets/pokemon-placeholder.png');
 
 type Props = {
   imageUrl: string;
@@ -12,16 +11,14 @@ type Props = {
 
 export default React.memo(function PokemonHeroHeader({ imageUrl }: Props) {
   const theme = useTheme();
-  const imageSrc = useCachedImage(imageUrl);
 
   return (
     <View style={style(theme).container}>
-      {
-        <Image
-          style={style(theme).image}
-          source={imageSrc ? { uri: imageSrc } : placeholder}
-        />
-      }
+      <Image
+        style={style(theme).image}
+        uri={imageUrl}
+        defaultSource={{ uri: POKEMON_IMG_PLACEHOLDER }}
+      />
     </View>
   );
 });

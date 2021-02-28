@@ -1,4 +1,5 @@
-import axios from 'axios';
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import axios, { AxiosResponse } from 'axios';
 import { IPokemon } from '../../types/pokemon';
 
 type ListPokemonsResponse = {
@@ -16,6 +17,26 @@ const extractIdFromUrl = (pokemon: { name: string; url: string }) => {
   };
 };
 
+const extractStatsFromResponse = (
+  res: AxiosResponse<any>
+): Partial<IPokemon> => {
+  const searchInStatArray = (property: string) =>
+    res.data.stats.find((stat: any) => stat.stat.name === property)
+      ?.base_stat || 0;
+
+  return {
+    name: res.data.name,
+    types: Object.values(res.data.types).map((type: any) => type.type.name),
+    stats: {
+      attack: searchInStatArray('attack'),
+      defense: searchInStatArray('defense'),
+      hp: searchInStatArray('hp'),
+      specialAttack: searchInStatArray('special-attack'),
+      specialDefense: searchInStatArray('special-defense'),
+      speed: searchInStatArray('speed'),
+    },
+  };
+};
 export class PokemonApi {
   static listPokemons(url: string): Promise<ListPokemonsResponse> {
     return axios.get(url).then((res) => {
@@ -24,5 +45,11 @@ export class PokemonApi {
         results: res.data.results.map(extractIdFromUrl),
       };
     });
+  }
+
+  static getPokemon(id: number | string): Promise<Partial<IPokemon>> {
+    return axios
+      .get(`https://pokeapi.co/api/v2/pokemon/${id}`)
+      .then(extractStatsFromResponse);
   }
 }
