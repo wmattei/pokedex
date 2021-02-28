@@ -21,7 +21,6 @@ export default function PokemonList({
     <View>
       <FlatList
         onEndReached={onEndReached}
-        removeClippedSubviews
         style={style.container}
         data={pokemons}
         numColumns={2}
