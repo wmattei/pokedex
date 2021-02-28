@@ -5,7 +5,7 @@ export default StyleSheet.create({
     flex: 1,
     padding: 10,
     justifyContent: 'center',
-    // alignItems: 'center',
+    alignItems: 'center',
     backgroundColor: '#F5FCFF',
   },
 });

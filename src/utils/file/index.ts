@@ -5,7 +5,7 @@ export class FileUtils {
   static async fetchImageFromCache(url: string) {
     const name = shorthash.unique(url);
 
-    const path = `${FileSystem.cacheDirectory}${name}`;
+    const path = `${FileSystem.cacheDirectory}${name}.png`;
 
     const image = await FileSystem.getInfoAsync(path);
     if (image.exists) {

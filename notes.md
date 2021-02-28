@@ -1,0 +1,3 @@
+- Refatorar função de estilo quando passo o tema
+- Remover StyleSheet.compose
+- Adciionar memos
