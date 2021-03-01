@@ -1,14 +1,22 @@
-# Storybook
-Este projeto usa storybook para facilitar o teste e desenvolvimento de componentes.
+# Iniciar o projeto
+1. Instale as dependências com `yarn install`
+2. Inicie o react-native-server com `yarn start`
+3. No browser inicie um simulador ou faça a leitura do código QR no seu dispositivo
 
-Para rodar o storybook:
+## Login
+As credenciais para login são:
+> usuario@totvs.com
+> totvs123
 
-1. `yarn run start-storybook` para rodar o react-native-server em modo storybook, que faz com que a aplicação não seja carregada, ao invés disso apenas as _stories_ vão ser carregadas
-2. `yarn run storybook` para iniciar a UI web do storybook, esse passo é opcional pois você pode interagir com o menu pelo simulador (menu inferior). Ao rodar esse comando, o browser abrirá uma janela que não terá nenhum componente para mostrar por enquanto.
-3. No dashboard do expo no browser inicie um simulador, isso fará com que o dashboard do storybook mostre os componentes disponíveis: 
+# Justificativas técnicas
+## Expo
+Como esse projeto compartilha 100% do código entre Android e iOS, eu decidi usar expo para facilitar o desenvolvimento, caso tivéssemos código nativo para cada plataforma eu usaria o comando `yarn export` e passaria a gerenciar código nativo.
 
-TODO imagem
+## React native paper
+Como a escolha de tema era livre, eu decidi usar `react-native-paper` como biblioteca UI para facilitar o desenvolvimento de componentes.
 
-
-
-> Caso não queria usar o dashboard do storybook web, voce pode apenas rodar o primeiro comando e abrir o app em um device físico 
+# Docs
+- [StoryBook](docs/storybook.md)
+- [Atomic design](docs/atomic-design.md)
+- [Dependências](docs/dependencies.md)
+- [Bugs conhecidos](docs/bugs.md)

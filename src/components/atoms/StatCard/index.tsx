@@ -10,10 +10,11 @@ type Props = {
 
 export default function StatCard({ label, value }: Props) {
   const theme = useTheme();
+  const themedStyle = style(theme);
 
   return (
-    <View style={style(theme).container}>
-      <Text style={style(theme).value}>{value}</Text>
+    <View style={themedStyle.container}>
+      <Text style={themedStyle.value}>{value}</Text>
       <Text>{label}</Text>
     </View>
   );

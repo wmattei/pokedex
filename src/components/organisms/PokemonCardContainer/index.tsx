@@ -1,7 +1,6 @@
 import { useNavigation } from '@react-navigation/native';
 import * as React from 'react';
-import { View } from 'react-native';
-import { FlatList } from 'react-native-gesture-handler';
+import { FlatList, View } from 'react-native';
 import { ActivityIndicator } from 'react-native-paper';
 import { APP_SCREENS } from '../../../routes/app-screens';
 import { IPokemon } from '../../../types/pokemon';

@@ -43,8 +43,8 @@ const AuthScreens = () => (
 );
 
 export default function Routes() {
-  // const isLoggedIn = !!useAuth().state.user;
-  const isLoggedIn = true;
+  const isLoggedIn = !!useAuth().state.user;
+  // const isLoggedIn = true;
 
   return (
     <NavigationContainer>

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { ScrollView } from 'react-native-gesture-handler';
+import { ScrollView } from 'react-native';
 import { Chip as ChipPaper, useTheme } from 'react-native-paper';
 import style from './style';
 
@@ -9,12 +9,12 @@ type Props = {
 
 export default function Chips({ chips }: Props) {
   const theme = useTheme();
-
+  const themedStyle = style(theme);
   return (
-    <ScrollView horizontal style={style(theme).container}>
+    <ScrollView horizontal style={themedStyle.container}>
       {chips.map((chip) => (
         <ChipPaper
-          style={style(theme).item}
+          style={themedStyle.item}
           key={`chip-${chip.id || chip.label}`}
         >
           {chip.label}

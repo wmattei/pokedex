@@ -1,12 +1,11 @@
 import * as React from 'react';
-import { Text } from 'react-native';
-import { ScrollView } from 'react-native-gesture-handler';
+import { ScrollView, Text } from 'react-native';
 import { POKEMON_IMG_URI } from '../../../constants';
 import { IPokemon, IPokemonStats } from '../../../types/pokemon';
 import { StringUtils } from '../../../utils/string';
 import PokemonStats from '../../molecules/PokemonStats';
 import PokemonTypes from '../../molecules/PokemonTypes';
-import PokemonHeroHeader from '../PokemonHeroHeader';
+import PokemonHeroHeader from '../../molecules/PokemonHeroHeader';
 import style from './style';
 
 type Props = {

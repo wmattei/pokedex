@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { SafeAreaView } from 'react-native';
 import { PokemonApi } from '../../../api/pokemon';
 import { IPokemon } from '../../../types/pokemon';
 import PokemonCardContainer from '../../organisms/PokemonCardContainer';

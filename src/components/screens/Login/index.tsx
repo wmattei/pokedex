@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Text, View } from 'react-native';
 import { useTheme } from 'react-native-paper';
 import { AuthApi } from '../../../api/auth/index';
 import { AuthActions } from '../../../store/auth/AuthContext';
@@ -22,6 +22,7 @@ const initialState: LoginState = {
 
 export default function Login() {
   const theme = useTheme();
+  const themedStyle = style(theme);
   const { dispatch: authDispatch } = useAuth();
   const [state, dispatch] = React.useReducer<
     React.Reducer<LoginState, ContextAction<string>>
@@ -42,14 +43,8 @@ export default function Login() {
 
   return (
     <Auth>
-      <View
-        style={StyleSheet.compose(
-          fullWidth.main,
-          // eslint-disable-next-line @typescript-eslint/no-explicit-any
-          style(theme).container as any
-        )}
-      >
-        <Text style={style(theme).welcome}>Bem-vindo</Text>
+      <View style={[fullWidth.main, themedStyle.container]}>
+        <Text style={themedStyle.welcome}>Bem-vindo</Text>
         <TextField
           onChangeText={(text) =>
             dispatch({ type: ACTIONS.EMAIL_CHANGED, payload: text })
@@ -73,8 +68,8 @@ export default function Login() {
           title={'Login'}
         />
 
-        <Text style={style(theme).error}>{state.error}</Text>
-        <Text style={style(theme).caption}>
+        <Text style={themedStyle.error}>{state.error}</Text>
+        <Text style={themedStyle.caption}>
           Essa aplicação foi desenvolvida para o processo seletivo da empresa
           Totvs, e não tem nenhum fim comercial.
         </Text>

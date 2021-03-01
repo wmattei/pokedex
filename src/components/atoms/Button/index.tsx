@@ -18,16 +18,18 @@ export default function Button({
   inverted,
   loading,
 }: Props) {
+  const themedStyle = style({ inverted });
+
   return (
     <PaperButton
-      style={disabled && style({ inverted }).disabledButton}
+      style={disabled && themedStyle.disabledButton}
       loading={loading}
       mode={inverted ? 'outlined' : 'contained'}
       accessibilityLabel={title}
       onPress={onPress}
       disabled={disabled}
     >
-      <Text style={disabled && style({ inverted }).disabledText}>{title}</Text>
+      <Text style={disabled && themedStyle.disabledText}>{title}</Text>
     </PaperButton>
   );
 }

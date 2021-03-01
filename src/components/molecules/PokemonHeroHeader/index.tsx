@@ -11,11 +11,11 @@ type Props = {
 
 export default React.memo(function PokemonHeroHeader({ imageUrl }: Props) {
   const theme = useTheme();
-
+  const themedStyle = style(theme);
   return (
-    <View style={style(theme).container}>
+    <View style={themedStyle.container}>
       <Image
-        style={style(theme).image}
+        style={themedStyle.image}
         uri={imageUrl}
         defaultSource={{ uri: POKEMON_IMG_PLACEHOLDER }}
       />

@@ -21,14 +21,31 @@ storiesOf('Button', module)
     <Button onPress={action('clicked-text')} title={text('Emoji', '😕')} />
   ))
   .add('Em estado de loading', () => (
-    <Button onPress={action('clicked-text')} loading />
+    <Button
+      onPress={action('clicked-text')}
+      title={text('Title', 'Hello World')}
+      loading
+    />
   ))
   .add('Botão invertido', () => (
-    <Button onPress={action('clicked-text')} inverted />
+    <Button
+      onPress={action('clicked-text')}
+      title={text('Title', 'Hello World')}
+      inverted
+    />
   ))
   .add('Botão disabled', () => (
-    <Button onPress={action('clicked-text')} disabled />
+    <Button
+      title={text('Title', 'Hello World')}
+      onPress={action('clicked-text')}
+      disabled
+    />
   ))
   .add('Botão invertido disabled', () => (
-    <Button onPress={action('clicked-text')} disabled inverted />
+    <Button
+      title={text('Title', 'Hello World')}
+      onPress={action('clicked-text')}
+      disabled
+      inverted
+    />
   ));
