@@ -51,7 +51,6 @@ Todas as images são cacheadas localmente quando carregadas pela primeira vez, f
 - [Atomic design](docs/atomic-design.md)
 - [Dependências](docs/dependencies.md)
 - [Bugs conhecidos](docs/bugs.md)
-- [Bugs conhecidos](docs/bugs.md)
 
 # O que eu faria se tivesse mais tempo:
 
