@@ -6,9 +6,9 @@
 
     "icon": "./assets/icon.png",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "https://img.icons8.com/clouds/452/pokemon-go.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#1e65d6"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -21,8 +21,8 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
+        "foregroundImage": "https://img.icons8.com/clouds/452/pokemon-go.png",
+        "backgroundColor": "#1e65d6"
       }
     },
     "web": {
