@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PokemonsHeroHeader Renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#6200ee",
+      "height": 220,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignSelf": "center",
+        "height": 200,
+        "marginTop": 70,
+        "width": 200,
+      }
+    }
+  >
+    <Image
+      onError={[Function]}
+      source={
+        Object {
+          "uri": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAUVBMVEX///8AAAD09PTMzMzZ2dkhISHv7+/m5ubU1NRKSkrHx8eOjo5QUFCpqal4eHhVVVUrKyv4+PiysrKqqqpBQUEZGRk1NTU7OzsJCQlzc3OUlJQZO629AAABVElEQVR4nO3cy07CUBSGUS6VigoqN9H3f1BHpZOdyC2esw9rjUvyfzkMmjbpZAIAAAAAAAAAAAAAAAAw6Obn6ktPvdJyeq5V6alXeleosHoKFdZP4SMVbkpPvUS3exvsTwW7PtCNhYfTb75K7//bc3RGy+jKWXic/733cgpHCmulcKSwVgpHCmulcKSwVgpHCmulcKSwVmFh+PQla+HsJTAPr0xaeD6F+SnMT2F+CvNrtXARvV3bfwwaKFxPj4OxcDX5HJTed7t19Nfcll51T2Fh1vf4IYX5KcxPYX6NFvbf68HhlLXfbgZd6YE366KDe2rgDu0kLpyVnnVHCvNTmJ/C/BTmpzA/hfkpzE9hfg9aeGypsH8N/LT0nAYAoAUPeuetMBWF+SnMT2F+CvNTmJ/C/BTmpzC/9gvDDy1MWyqcLCKlRwEAAAAAAAAAAAAAAAB1+gWlkhf/xP9IqQAAAABJRU5ErkJggg==",
+        }
+      }
+      style={
+        Array [
+          Object {
+            "bottom": 0,
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          },
+          Object {},
+        ]
+      }
+      transitionDuration={300}
+      uri="https://pokeres.bastionbot.org/images/pokemon/1.png"
+    />
+  </View>
+</View>
+`;

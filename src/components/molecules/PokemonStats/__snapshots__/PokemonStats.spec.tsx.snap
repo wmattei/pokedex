@@ -1,0 +1,210 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PokemonsStats Renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "marginTop": 30,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "fontSize": 25,
+        "paddingLeft": 15,
+      }
+    }
+  >
+    Stats:
+  </Text>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "justifyContent": "space-around",
+        "paddingTop": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "borderColor": "#6200ee",
+          "borderRadius": 5,
+          "borderStyle": "solid",
+          "borderWidth": 1,
+          "height": 100,
+          "justifyContent": "space-evenly",
+          "width": 100,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#6200ee",
+            "fontSize": 30,
+          }
+        }
+      >
+        1
+      </Text>
+      <Text>
+        HP
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "borderColor": "#6200ee",
+          "borderRadius": 5,
+          "borderStyle": "solid",
+          "borderWidth": 1,
+          "height": 100,
+          "justifyContent": "space-evenly",
+          "width": 100,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#6200ee",
+            "fontSize": 30,
+          }
+        }
+      >
+        1
+      </Text>
+      <Text>
+        Ataque
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "borderColor": "#6200ee",
+          "borderRadius": 5,
+          "borderStyle": "solid",
+          "borderWidth": 1,
+          "height": 100,
+          "justifyContent": "space-evenly",
+          "width": 100,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#6200ee",
+            "fontSize": 30,
+          }
+        }
+      >
+        1
+      </Text>
+      <Text>
+        Defesa
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "justifyContent": "space-around",
+        "paddingTop": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "borderColor": "#6200ee",
+          "borderRadius": 5,
+          "borderStyle": "solid",
+          "borderWidth": 1,
+          "height": 100,
+          "justifyContent": "space-evenly",
+          "width": 100,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#6200ee",
+            "fontSize": 30,
+          }
+        }
+      >
+        1
+      </Text>
+      <Text>
+        Ataque especial
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "borderColor": "#6200ee",
+          "borderRadius": 5,
+          "borderStyle": "solid",
+          "borderWidth": 1,
+          "height": 100,
+          "justifyContent": "space-evenly",
+          "width": 100,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#6200ee",
+            "fontSize": 30,
+          }
+        }
+      >
+        1
+      </Text>
+      <Text>
+        Defesa especial
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "borderColor": "#6200ee",
+          "borderRadius": 5,
+          "borderStyle": "solid",
+          "borderWidth": 1,
+          "height": 100,
+          "justifyContent": "space-evenly",
+          "width": 100,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#6200ee",
+            "fontSize": 30,
+          }
+        }
+      >
+        1
+      </Text>
+      <Text>
+        Velocidade
+      </Text>
+    </View>
+  </View>
+</View>
+`;

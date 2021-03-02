@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StatCard Renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "borderColor": "#6200ee",
+      "borderRadius": 5,
+      "borderStyle": "solid",
+      "borderWidth": 1,
+      "height": 100,
+      "justifyContent": "space-evenly",
+      "width": 100,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "#6200ee",
+        "fontSize": 30,
+      }
+    }
+  >
+    4
+  </Text>
+  <Text>
+    HP
+  </Text>
+</View>
+`;
