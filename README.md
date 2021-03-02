@@ -34,6 +34,16 @@ Para  rodar os testes
 
 Para rodar os testes e gerar snapshot novo
 `yarn test -u`
+
+## Scroll infinito
+
+Para uma melhor experiência do usuário decidi usar scroll infinito para listar os pokemons.
+Quando a lista atinge 20% antes do fim dela, eu faço uma nova requisição trazendo mais pokemons.
+A lista é virtualizada para evitar leak de memória mesmo com uma lista gigante.
+
+## Cache de imagens
+Todas as images são cacheadas localmente quando carregadas pela primeira vez, fazendo com q as próximas vezes que forem carregadas seja muito mais rapido
+
 # Docs
 
 - [StoryBook](docs/storybook.md)

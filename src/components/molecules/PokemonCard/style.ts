@@ -15,4 +15,8 @@ export default StyleSheet.create({
     marginTop: 10,
     fontSize: 24,
   },
+  container: {
+    margin: 4,
+    padding: 10,
+  },
 });
