@@ -44,6 +44,7 @@ A lista é virtualizada para evitar leak de memória mesmo com uma lista gigante
 ## Cache de imagens
 Todas as images são cacheadas localmente quando carregadas pela primeira vez, fazendo com q as próximas vezes que forem carregadas seja muito mais rapido
 
+
 # Docs
 
 - [StoryBook](docs/storybook.md)
@@ -51,3 +52,12 @@ Todas as images são cacheadas localmente quando carregadas pela primeira vez, f
 - [Dependências](docs/dependencies.md)
 - [Bugs conhecidos](docs/bugs.md)
 - [Bugs conhecidos](docs/bugs.md)
+
+# O que eu faria se tivesse mais tempo:
+
+- Autenticação real com AWS amplify
+- Cache de dados fazendo com que o app seja offline first
+- Filtros e pesquisa de pokemon
+- Mais items na tela de detalhes
+- Comparar pokemons
+- Otimizar visualização em landscap
